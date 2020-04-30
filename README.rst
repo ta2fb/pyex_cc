@@ -2,6 +2,8 @@
 pyex_cc
 *******
 
+This project is based on tools discussed in the book *Serious Python: Black-Belt Advice on Deployment, Scalability, Testing, and More* by Julian Danjou
+
 Cookiecutter initial instructions
 #################################
 
