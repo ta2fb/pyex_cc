@@ -38,7 +38,15 @@ Instructions for using this cookiecutter
     cookiecutter https://github.com/ta2fb/pyex_cc
 
 5. Create git repository on AWS CodeCommit
+
+.. code-block:: bash
+
+    aws codecommit create-repository --repository-name {{cookiecutter.project_name}} --repository-description {{cookiecutter.description}}
+
 6. Configure CodeCommit credentials accordingly
+
+.. _Using IAM with CodeCommit\: Git Credentials, SSH Keys, and AWS Access Keys: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_ssh-keys.html
+
 7. Change to project directory and initialize git
 
 .. code-block:: bash
