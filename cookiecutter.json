@@ -1,6 +1,7 @@
 {
-    "project_name": "GitRepo",
-    "package_name": "PackageName",
+    "project_name": "git-repo",
+    "namespace_name": "namespace",
+    "package_name": "package",
     "description": "This is a description of your package.",
     "author": "FirstName LastName",
     "author_email": "name@email.com",
