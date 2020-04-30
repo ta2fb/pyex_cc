@@ -14,22 +14,22 @@ Development
 1. Download and install Anaconda or Miniconda
 2. Create a new conda environment and activate it
 
-    .. code-block:: bash
-    
-        conda create --name {{cookiecutter.package_name}} python=3.8
-        conda activate {{cookiecutter.package_name}}
+.. code-block:: bash
+
+    conda create --name {{cookiecutter.package_name}} python=3.8
+    conda activate {{cookiecutter.package_name}}
 
 3. Install the code and development dependencies in the current conda environment
 
-    .. code-block:: bash
-    
-        pip install -e .[dev]
+.. code-block:: bash
+
+    pip install -e .[dev]
 
 4. Build project
 
-    .. code-block:: bash
-    
-        tox
+.. code-block:: bash
+
+    tox
 
 Build commands
 **************

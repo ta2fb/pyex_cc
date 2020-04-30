@@ -15,51 +15,51 @@ Instructions for using this cookiecutter
 1. Download and install Anaconda or Miniconda
 2. Create a new conda environment and activate it
 
-    .. code-block:: bash
-    
-        conda create --name pyex_cc python=3.8
-        conda activate pyex_cc
+.. code-block:: bash
+
+    conda create --name pyex_cc python=3.8
+    conda activate pyex_cc
 
 3. Install cookiecutter
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        pip install cookiecutter
+    pip install cookiecutter
 
 4. Create new project with pyex_cc
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        # for ssh credentials
-        cookiecutter git@github.com:ta2fb/pyex_cc.git
-        # for https credentials
-        cookiecutter https://github.com/ta2fb/pyex_cc
+    # for ssh credentials
+    cookiecutter git@github.com:ta2fb/pyex_cc.git
+    # for https credentials
+    cookiecutter https://github.com/ta2fb/pyex_cc
 
 5. Create git repository on AWS CodeCommit
 6. Configure CodeCommit credentials accordingly
 7. Change to project directory and initialize git
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        cd {{cookiecutter.project_name}}
-        git init
+    cd {{cookiecutter.project_name}}
+    git init
 
 8. Set remote origin to CodeCommit git repository url
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        # for ssh credentials
-        git remote add origin ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/{{cookiecutter.project_name}}
-        # for https credentials
-        git remote add origin https://git-codecommit.us-east-1.amazonaws.com/v1/repos/{{cookiecutter.project_name}}
+    # for ssh credentials
+    git remote add origin ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/{{cookiecutter.project_name}}
+    # for https credentials
+    git remote add origin https://git-codecommit.us-east-1.amazonaws.com/v1/repos/{{cookiecutter.project_name}}
 
-    .. note:: You may need to change the region in the above urls
+.. note:: You may need to change the region in the above urls
 
 9. Deactivate pyex_cc conda environment
 
-    .. code-block:: bash
-    
-        conda deactivate pyex_cc
+.. code-block:: bash
+
+    conda deactivate pyex_cc
 
 10. Continue with the steps in the Development section within the new project created
 
