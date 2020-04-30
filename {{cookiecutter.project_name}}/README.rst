@@ -64,7 +64,7 @@ Lint code
 
     tox -e lint
 
-Lint code, run tests, and build project, create docs, run code coverage
+Lint code, run tests, build project, create docs, run code coverage
 
 .. code-block:: bash
 
