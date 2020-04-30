@@ -1,9 +1,9 @@
-.. {{cookiecutter.package_name}} documentation master file, created by
+.. {{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}} documentation master file, created by
    sphinx-quickstart on Fri Apr 17 17:31:29 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to {{cookiecutter.package_name}}'s documentation!
+Welcome to {{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}}'s documentation!
 =========================================================
 
 .. toctree::
@@ -11,7 +11,7 @@ Welcome to {{cookiecutter.package_name}}'s documentation!
    :caption: Contents:
 
    readme
-   {{cookiecutter.package_name}}
+   {{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}}
    changelog
 
 Indices and tables

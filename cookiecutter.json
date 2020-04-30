@@ -1,8 +1,9 @@
 {
-    "project_name": "GitRepo",
-    "package_name": "PackageName",
+    "project_name": "gitrepo",
+    "namespace_name": "namespace",
+    "subpackage_name": "subpackage",
     "description": "This is a description of your package.",
-    "author": "FirstName LastName",
+    "author": "Firstname Lastname",
     "author_email": "name@email.com",
-    "s3pypi_bucket": "S3PyPiBucket"
+    "s3pypi_bucket": "s3pypibucket"
 }
