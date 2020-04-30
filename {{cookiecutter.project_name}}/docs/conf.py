@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
-project = '{{cookiecutter.package_name}}'
+project = '{{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}}'
 copyright = '2020, {{cookiecutter.author}}'
 author = '{{cookiecutter.author}}'
 

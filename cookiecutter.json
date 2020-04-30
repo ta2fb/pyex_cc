@@ -1,7 +1,7 @@
 {
     "project_name": "gitrepo",
     "namespace_name": "namespace",
-    "package_name": "package",
+    "subpackage_name": "package",
     "description": "This is a description of your package.",
     "author": "Firstname Lastname",
     "author_email": "name@email.com",
