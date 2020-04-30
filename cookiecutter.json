@@ -1,0 +1,8 @@
+{
+    "project_name": "GitRepo",
+    "package_name": "PackageName",
+    "description": "This is a description of your package.",
+    "author": "FirstName LastName",
+    "author_email": "name@email.com",
+    "s3pypi_bucket": "S3PyPiBucket"
+}
