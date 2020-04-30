@@ -11,8 +11,8 @@ Welcome to {{cookiecutter.package_name}}'s documentation!
    :caption: Contents:
 
    readme
-   changelog
    {{cookiecutter.package_name}}
+   changelog
 
 Indices and tables
 ==================

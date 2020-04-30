@@ -50,6 +50,10 @@ else
     echo "The candidate release version $RELEASE_VERSION format is correct, proceeding"
     # get latest tag
     LATEST_TAG=`git tag -l | sort -n | tail -1`
+    # if there are no tags, set latest to 0.0.0
+    if [ -z "$LATEST_TAG" ]; then
+      LATEST_TAG="0.0.0"
+    fi
     vercomp $LATEST_TAG $RELEASE_VERSION
     RETVAL=$?
     if [ $RETVAL -eq 2 ]; then
@@ -83,16 +87,6 @@ echodt "Running the tox release command to build $RELEASE_VERSION"
 tox -e release
 RETVAL=$?
 check_release_command $RETVAL
-
-echodt "Committing the ChangeLog and AUTHORS update (if any)"
-git add ChangeLog AUTHORS
-git commit -m "$RELEASE_VERSION release"
-
-echodt "Deleting the $RELEASE_VERSION tag from the previous commit"
-git tag -d $RELEASE_VERSION
-
-echodt "Creating the $RELEASE_VERSION tag for the current commit"
-git tag $RELEASE_VERSION
 {% endraw %}
 echodt "Pushing the $RELEASE_VERSION artifacts to the s3pypi bucket"
 s3pypi --bucket {{cookiecutter.s3pypi_bucket}}
