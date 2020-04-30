@@ -102,7 +102,7 @@ Cookiecutter packages and purposes
 * tox
 
   * Automate and standardize testing and building of the project
-  * Builds clean environments for proper testing of code (example builds a py36 venv in .tox)
+  * Builds clean environments for proper testing of code
 
 * tox-conda
 
