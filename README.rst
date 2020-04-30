@@ -41,7 +41,7 @@ Instructions for using this cookiecutter
 
     .. code-block:: bash
 
-        cd {{cookiecutter.package_name}}
+        cd {{cookiecutter.project_name}}
         git init
 
 8. Set remote origin to CodeCommit git repository url
@@ -49,9 +49,9 @@ Instructions for using this cookiecutter
     .. code-block:: bash
 
         # for ssh credentials
-        git remote add origin ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/{{cookiecutter.package_name}}
+        git remote add origin ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/{{cookiecutter.project_name}}
         # for https credentials
-        git remote add origin https://git-codecommit.us-east-1.amazonaws.com/v1/repos/{{cookiecutter.package_name}}
+        git remote add origin https://git-codecommit.us-east-1.amazonaws.com/v1/repos/{{cookiecutter.project_name}}
 
     .. note:: You may need to change the region in the above urls
 
@@ -90,11 +90,10 @@ Cookiecutter packages and purposes
 * sphinx
 
   * Code documentation
-  * To initialize the configuration, run 'mkdir docs && cd docs && sphinx-quickstart'
   * Themes to choose from: https://sphinx-themes.org/
   * After building documentation can be viewed in your browser at
 
-    * file:///path/to/pyex/build/sphinx/html/index.html
+    * file:///path/to/{cookiecutter.project_name}}/build/sphinx/html/index.html
 
 * setuptools
 
