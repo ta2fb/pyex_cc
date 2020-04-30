@@ -16,8 +16,8 @@ Development
 
 .. code-block:: bash
 
-    conda create --name {{cookiecutter.package_name}} python=3.8
-    conda activate {{cookiecutter.package_name}}
+    conda create --name {{cookiecutter.namespace_name}}.{{cookiecutter.package_name}} python=3.8
+    conda activate {{cookiecutter.namespace_name}}.{{cookiecutter.package_name}}
 
 3. Install the code and development dependencies in the current conda environment
 

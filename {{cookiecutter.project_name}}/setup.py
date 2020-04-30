@@ -1,6 +1,7 @@
-import setuptools
+from setuptools import setup, find_namespace_packages
 
-setuptools.setup(
+setup(
     setup_requires=['pbr'],
-    pbr=True
+    pbr=True,
+    packages=find_namespace_packages(include=['{{cookiecutter.namespace_name}}.*'])
 )

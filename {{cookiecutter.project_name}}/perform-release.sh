@@ -92,7 +92,7 @@ echodt "Pushing the $RELEASE_VERSION artifacts to the s3pypi bucket"
 s3pypi --bucket {{cookiecutter.s3pypi_bucket}}
 
 echodt "Pushing the $RELEASE_VERSION documentation to the s3pypi bucket"
-aws s3 sync --acl public-read build/sphinx/html/ s3://{{cookiecutter.s3pypi_bucket}}/docs/{{cookiecutter.package_name}}/${RELEASE_VERSION}/
+aws s3 sync --acl public-read build/sphinx/html/ s3://{{cookiecutter.s3pypi_bucket}}/docs/{{cookiecutter.namespace_name}}.{{cookiecutter.package_name}}/${RELEASE_VERSION}/
 
 echo
 echodt "The release has been successfully completed - Be sure to push master and tags to origin"
