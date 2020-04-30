@@ -45,7 +45,9 @@ Instructions for using this cookiecutter
 
 6. Configure CodeCommit credentials accordingly
 
-.. _Using IAM with CodeCommit\: Git Credentials, SSH Keys, and AWS Access Keys: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_ssh-keys.html
+`Using IAM with CodeCommit: Git Credentials, SSH Keys, and AWS Access Keys`_
+
+.. _`Using IAM with CodeCommit: Git Credentials, SSH Keys, and AWS Access Keys`: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_ssh-keys.html
 
 7. Change to project directory and initialize git
 
