@@ -71,7 +71,7 @@ Instructions for using this cookiecutter
 
 .. code-block:: bash
 
-    conda deactivate pyex_cc
+    conda deactivate
 
 10. Continue with the steps in the Development section within the new project created
 
