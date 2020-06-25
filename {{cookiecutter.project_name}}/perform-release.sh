@@ -96,10 +96,10 @@ check_release_command $RETVAL
 
 if [ -n "$S3PYPI_BUCKET" ]; then
   echodt "Pushing the $RELEASE_VERSION artifacts to the s3pypi bucket"
-  s3pypi --bucket {{cookiecutter.s3pypi_bucket}}
+  s3pypi --bucket $S3PYPI_BUCKET
 
   echodt "Pushing the $RELEASE_VERSION documentation to the s3pypi bucket"
-  aws s3 sync --acl public-read build/sphinx/html/ s3://{{cookiecutter.s3pypi_bucket}}/docs/{{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}}/${RELEASE_VERSION}/
+  aws s3 sync --acl public-read build/sphinx/html/ s3://${S3PYPI_BUCKET}/docs/{{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}}/${RELEASE_VERSION}/
 fi
 
 if [ -n "$CODEARTIFACT_DOMAIN" ] && [ -n "$CODEARTIFACT_REPOSITORY" ] && [ -n "$CODEARTIFACT_DOMAIN_OWNER" ]; then
