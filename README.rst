@@ -10,7 +10,7 @@ Cookiecutter initial instructions
 Assumptions
 
 * Git repository is hosted on AWS CodeCommit
-* PyPI repository is backed by s3 and uses s3pypi
+* PyPI repository is backed by s3 and uses s3pypi and/or CodeArtifact
 
 Instructions for using this cookiecutter
 

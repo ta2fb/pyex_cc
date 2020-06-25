@@ -6,5 +6,8 @@
     "description": "This is a description of your package.",
     "author": "Firstname Lastname",
     "author_email": "name@email.com",
-    "s3pypi_bucket": "s3pypibucket"
+    "s3pypi_bucket": "If set to empty, s3pypi package and documentation upload will be skipped",
+    "codeartifact_domain_owner": "If set to empty, CodeArtifact upload will be skipped",
+    "codeartifact_domain": "If set to empty, CodeArtifact upload will be skipped",
+    "codeartifact_repository": "If set to empty, CodeArtifact upload will be skipped"
 }

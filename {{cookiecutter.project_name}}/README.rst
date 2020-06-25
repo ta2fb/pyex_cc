@@ -79,7 +79,7 @@ Run tests
 Releases
 ########
 
-.. warning:: Make sure you have write permissions to the s3pypi bucket before running this command!
+.. warning:: Make sure you have write permissions to the s3pypi bucket and/or the CodeArtifact repository before running this command!
 
 .. code-block:: bash
 

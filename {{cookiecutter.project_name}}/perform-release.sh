@@ -1,5 +1,10 @@
 #! /bin/bash
 
+CODEARTIFACT_DOMAIN={{cookiecutter.codeartifact_domain}}
+CODEARTIFACT_DOMAIN_OWNER={{cookiecutter.codeartifact_domain_owner}}
+CODEARTIFACT_REPOSITORY={{cookiecutter.codeartifact_repository}}
+S3PYPI_BUCKET={{cookiecutter.s3pypi_bucket}}
+
 {% raw %}
 function echodt {
   echo "`date`: $1"
@@ -88,11 +93,23 @@ tox -e release
 RETVAL=$?
 check_release_command $RETVAL
 {% endraw %}
-echodt "Pushing the $RELEASE_VERSION artifacts to the s3pypi bucket"
-s3pypi --bucket {{cookiecutter.s3pypi_bucket}}
 
-echodt "Pushing the $RELEASE_VERSION documentation to the s3pypi bucket"
-aws s3 sync --acl public-read build/sphinx/html/ s3://{{cookiecutter.s3pypi_bucket}}/docs/{{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}}/${RELEASE_VERSION}/
+if [ -n "$S3PYPI_BUCKET" ]; then
+  echodt "Pushing the $RELEASE_VERSION artifacts to the s3pypi bucket"
+  s3pypi --bucket {{cookiecutter.s3pypi_bucket}}
+
+  echodt "Pushing the $RELEASE_VERSION documentation to the s3pypi bucket"
+  aws s3 sync --acl public-read build/sphinx/html/ s3://{{cookiecutter.s3pypi_bucket}}/docs/{{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}}/${RELEASE_VERSION}/
+fi
+
+if [ -n "$CODEARTIFACT_DOMAIN" ] && [ -n "$CODEARTIFACT_REPOSITORY" ] && [ -n "$CODEARTIFACT_DOMAIN_OWNER" ]; then
+  echodt "Configuring twine for CodeArtifact and obtaining new credentials"
+  aws codeartifact login --tool twine --repository $CODEARTIFACT_REPOSITORY --domain $CODEARTIFACT_DOMAIN --domain-owner $CODEARTIFACT_DOMAIN_OWNER
+  echodt "Building the distribution"
+  python setup.py sdist
+  echodt "Uploading the distribution to CodeArtifact"
+  twine upload -r "codeartifact dist/*${RELEASE_VERSION}.tar.gz"
+fi
 
 echo
 echodt "The release has been successfully completed - Be sure to push master and tags to origin"
