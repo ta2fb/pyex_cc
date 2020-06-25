@@ -108,7 +108,7 @@ if [ -n "$CODEARTIFACT_DOMAIN" ] && [ -n "$CODEARTIFACT_REPOSITORY" ] && [ -n "$
   echodt "Building the distribution"
   python setup.py sdist
   echodt "Uploading the distribution to CodeArtifact"
-  twine upload -r "codeartifact dist/*${RELEASE_VERSION}.tar.gz"
+  twine upload -r codeartifact "dist/*${RELEASE_VERSION}.tar.gz"
 fi
 
 echo
