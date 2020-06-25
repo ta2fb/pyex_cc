@@ -2,6 +2,7 @@
     "project_name": "gitrepo",
     "namespace_name": "namespace",
     "subpackage_name": "subpackage",
+    "python_version": "3.8",
     "description": "This is a description of your package.",
     "author": "Firstname Lastname",
     "author_email": "name@email.com",
