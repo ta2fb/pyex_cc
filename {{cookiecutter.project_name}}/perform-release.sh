@@ -112,5 +112,5 @@ if [ -n "$CODEARTIFACT_DOMAIN" ] && [ -n "$CODEARTIFACT_REPOSITORY" ] && [ -n "$
 fi
 
 echo
-echodt "The release has been successfully completed - Be sure to push master and tags to origin"
+echodt "The release has been successfully completed - Be sure to push commits and tags to origin"
 echo
