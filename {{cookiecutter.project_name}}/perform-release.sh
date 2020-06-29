@@ -3,6 +3,7 @@
 CODEARTIFACT_DOMAIN={{cookiecutter.codeartifact_domain}}
 CODEARTIFACT_DOMAIN_OWNER={{cookiecutter.codeartifact_domain_owner}}
 CODEARTIFACT_REPOSITORY={{cookiecutter.codeartifact_repository}}
+PACKAGE_NAME={{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}}
 S3PYPI_BUCKET={{cookiecutter.s3pypi_bucket}}
 
 {% raw %}
@@ -99,7 +100,7 @@ if [ -n "$S3PYPI_BUCKET" ]; then
   s3pypi --bucket $S3PYPI_BUCKET
 
   echodt "Pushing the $RELEASE_VERSION documentation to the s3pypi bucket"
-  aws s3 sync --acl public-read build/sphinx/html/ s3://${S3PYPI_BUCKET}/docs/{{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}}/${RELEASE_VERSION}/
+  aws s3 sync --acl public-read build/sphinx/html/ s3://${S3PYPI_BUCKET}/docs/${PACKAGE_NAME}/${RELEASE_VERSION}/
 fi
 
 if [ -n "$CODEARTIFACT_DOMAIN" ] && [ -n "$CODEARTIFACT_REPOSITORY" ] && [ -n "$CODEARTIFACT_DOMAIN_OWNER" ]; then
