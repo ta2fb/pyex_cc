@@ -79,8 +79,10 @@ Run tests
 Releases
 ########
 
-.. warning:: Make sure you have write permissions to the s3pypi bucket and/or the CodeArtifact repository before running this command!
+This project uses https://github.com/ta2fb/codeartifact_release for releases that are pushed to AWS CodeArtifact.
+
+.. warning:: Make sure you have write permissions to the CodeArtifact repository before running this command!
 
 .. code-block:: bash
 
-    ./perform-release.sh x.y.z
+    codeartifact-release --version x.y.z
