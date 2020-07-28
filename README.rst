@@ -80,6 +80,7 @@ Cookiecutter packages and purposes
 ##################################
 
 * codeartifact-release (https://github.com/ta2fb/codeartifact_release)
+
   * Cuts releases and pushes artifacts to AWS CodeArtifact
 
 * pbr
