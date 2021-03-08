@@ -34,7 +34,7 @@ Development
 Build commands
 **************
 
-Lint code, run tests, and build project
+Lint code check (run 'tox -e lint' if check fails), run tests, and build project
 
 .. code-block:: bash
 
@@ -58,13 +58,13 @@ Build sphinx docs
 
     tox -e docs
 
-Lint code
+Lint code - black will automatically fix formatting issues
 
 .. code-block:: bash
 
     tox -e lint
 
-Lint code, run tests, build project, create docs, run code coverage
+Lint code check (run 'tox -e lint' if check fails), run tests, build project, create docs, run code coverage
 
 .. code-block:: bash
 

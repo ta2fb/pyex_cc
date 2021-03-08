@@ -2,4 +2,4 @@ from {{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}}.hello impo
 
 
 def test_hello():
-    assert hello_world() == 'hello world'
+    assert hello_world() == "hello world"

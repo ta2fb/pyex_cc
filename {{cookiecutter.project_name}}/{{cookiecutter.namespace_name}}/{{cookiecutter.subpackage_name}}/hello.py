@@ -1,7 +1,7 @@
 """Hello file"""
 
 
-def hello_world(text: str = 'hello world') -> str:
+def hello_world(text: str = "hello world") -> str:
     """Hello world documentation
 
     This project uses the Google Style Python Docstrings
