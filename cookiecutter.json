@@ -1,4 +1,5 @@
 {
+    "github_org": "organization",
     "project_name": "gitrepo",
     "namespace_name": "namespace",
     "subpackage_name": "subpackage",

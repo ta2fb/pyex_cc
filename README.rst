@@ -9,7 +9,7 @@ Cookiecutter initial instructions
 
 Assumptions
 
-* Git repository is hosted on AWS CodeCommit
+* Git repository is hosted on GitHub
 * PyPI repository is hosted on AWS CodeArtifact
 
 Instructions for using this cookiecutter
@@ -37,35 +37,24 @@ Instructions for using this cookiecutter
     # for https credentials
     cookiecutter https://github.com/ta2fb/pyex_cc
 
-5. Create git repository on AWS CodeCommit
+5. Create git repository on GitHub
 
-.. code-block:: bash
-
-    aws codecommit create-repository --repository-name {{cookiecutter.project_name}} --repository-description {{cookiecutter.description}}
-
-6. Configure CodeCommit credentials accordingly
-
-`Using IAM with CodeCommit: Git Credentials, SSH Keys, and AWS Access Keys`_
-
-.. _`Using IAM with CodeCommit: Git Credentials, SSH Keys, and AWS Access Keys`: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_ssh-keys.html
-
-7. Change to project directory and initialize git
+6. Change to project directory and initialize git
 
 .. code-block:: bash
 
     cd {{cookiecutter.project_name}}
     git init
 
-8. Set remote origin to CodeCommit git repository url
+7. Set remote origin to GitHub git repository url
 
 .. code-block:: bash
 
     # for ssh credentials
-    git remote add origin ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/{{cookiecutter.project_name}}
+    git remote add origin git@github.com:{{cookiecutter.github_org}}/{{cookiecutter.project_name}}.git
     # for https credentials
-    git remote add origin https://git-codecommit.us-east-1.amazonaws.com/v1/repos/{{cookiecutter.project_name}}
+    git remote add origin https://github.com/{{cookiecutter.github_org}}/{{cookiecutter.project_name}}.git
 
-.. note:: You may need to change the region in the above urls
 
 9. Deactivate pyex_cc conda environment
 
