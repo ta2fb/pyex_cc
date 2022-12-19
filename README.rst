@@ -56,13 +56,13 @@ Instructions for using this cookiecutter
     git remote add origin https://github.com/{{cookiecutter.github_org}}/{{cookiecutter.project_name}}.git
 
 
-9. Deactivate pyex_cc conda environment
+8. Deactivate pyex_cc conda environment
 
 .. code-block:: bash
 
     conda deactivate
 
-10. Continue with the steps in the Development section within the new project created
+9. Continue with the steps in the Development section within the new project created
 
 
 Cookiecutter packages and purposes
