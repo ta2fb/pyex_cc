@@ -19,7 +19,7 @@ Development
     conda create --name {{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}} python={{cookiecutter.python_version}}
     conda activate {{cookiecutter.namespace_name}}.{{cookiecutter.subpackage_name}}
 
-3. Install the code and development dependencies in the current conda environment
+3. Install the code and development dependencies in the current conda environment. The pip-compile commands are only needed when updating packages, pip-sync is needed to install/sync the dependencies of your environment.
 
 .. code-block:: bash
 
