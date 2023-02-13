@@ -23,7 +23,10 @@ Development
 
 .. code-block:: bash
 
-    pip install -e .[dev]
+    pip install pip-tools
+    pip-compile --no-emit-index-url requirements.in
+    pip-compile --no-emit-index-url dev-requirements.in
+    pip-sync dev-requirements.txt
 
 4. Build project
 
